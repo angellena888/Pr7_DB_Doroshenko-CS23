@@ -74,12 +74,15 @@ Microsoft SQL Server 2025 (RTM)
 Express Edition (64-bit)
 
 Завдання 6 Опис таблиці Flights
-Логічне ім’я	Фізичне ім’я	Тип даних T-SQL	PKEY	FKEY	NULLS	UNIQUE
-ID рейсу	FlightID	INT	✔️	–	NOT NULL	✔️
-Місто вильоту	FromCity	NVARCHAR(50)	–	–	NOT NULL	–
-Місто прибуття	ToCity	NVARCHAR(50)	–	–	NOT NULL	–
-Відстань (км)	Distance	INT	–	–	NOT NULL	–
-Тип літака	PlaneType	NVARCHAR(50)	–	FK → Plane(PlaneType)	NOT NULL	–
+
+| **Логічне ім’я**   | **Фізичне ім’я** | **Тип даних T-SQL** | **PKEY** | **FKEY**                     | **NULLS**   | **UNIQUE** |
+|--------------------|------------------|----------------------|----------|------------------------------|-------------|------------|
+| *ID рейсу*         | `FlightID`       | INT                  | ✔️       | –                            | NOT NULL    | ✔️         |
+| *Місто вильоту*    | `FromCity`       | NVARCHAR(50)         | –        | –                            | NOT NULL    | –          |
+| *Місто прибуття*   | `ToCity`         | NVARCHAR(50)         | –        | –                            | NOT NULL    | –          |
+| *Відстань (км)*    | `Distance`       | INT                  | –        | –                            | NOT NULL    | –          |
+| *Тип літака*       | `PlaneType`      | NVARCHAR(50)         | –        | FK → `Plane(PlaneType)`      | NOT NULL    | –          |
+
 
 Завдання 7 — Скрипт створення таблиці (SETUP.sql)
 USE master;
